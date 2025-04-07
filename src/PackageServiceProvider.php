@@ -1,17 +1,17 @@
 <?php
 
-namespace ProcessMaker\Package\PackageSkeleton;
+namespace ProcessMaker\Package\Webentry;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 use ProcessMaker\Package\Packages\Events\PackageEvent;
-use ProcessMaker\Package\PackageSkeleton\Http\Middleware\AddToMenus;
-use ProcessMaker\Package\PackageSkeleton\Listeners\PackageListener;
+use ProcessMaker\Package\Webentry\Http\Middleware\AddToMenus;
+use ProcessMaker\Package\Webentry\Listeners\PackageListener;
 
 class PackageServiceProvider extends ServiceProvider
 {
     // Assign the default namespace for our controllers
-    protected $namespace = '\ProcessMaker\Package\PackageSkeleton\Http\Controllers';
+    protected $namespace = '\ProcessMaker\Package\Webentry\Http\Controllers';
 
     /**
      * If your plugin will provide any services, you can register them here.
@@ -21,11 +21,11 @@ class PackageServiceProvider extends ServiceProvider
     {
         $this->publishes([
             __DIR__.'/../database/migrations' => database_path('migrations'),
-        ], 'package-skeleton-migrations');
+        ], 'webentry-migrations');
 
         $this->publishes([
-            __DIR__ . '/../public' => public_path('vendor/BPMNmaker/package-skeleton'),
-        ], 'package-skeleton');
+            __DIR__ . '/../public' => public_path('vendor/BPMNmaker/webentry'),
+        ], 'webentry');
     }
 
     public function register()
@@ -68,7 +68,7 @@ class PackageServiceProvider extends ServiceProvider
 
         $this->registerPublishing();
 
-        $this->loadViewsFrom(__DIR__ . '/../resources/views/', 'package-skeleton');
+        $this->loadViewsFrom(__DIR__ . '/../resources/views/', 'webentry');
 
         $this->app['events']->listen(PackageEvent::class, PackageListener::class);
     }

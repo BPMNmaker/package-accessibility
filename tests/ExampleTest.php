@@ -1,5 +1,5 @@
 <?php
-namespace Tests\PackageSkeleton;
+namespace Tests\Webentry;
 
 use Tests\TestCase;
 

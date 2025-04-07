@@ -1,6 +1,6 @@
 <?php
 
-namespace ProcessMaker\Package\PackageSkeleton\Console\Commands;
+namespace ProcessMaker\Package\Webentry\Console\Commands;
 
 use Artisan;
 use ProcessMaker\Console\PackageInstallCommand;
@@ -12,14 +12,14 @@ class Install extends PackageInstallCommand
      *
      * @var string
      */
-    protected $signature = 'package-skeleton:install';
+    protected $signature = 'webentry:install';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Install Package Skeleton Package';
+    protected $description = 'Install Webentry Package';
 
     /**
      * Publish assets
@@ -29,7 +29,7 @@ class Install extends PackageInstallCommand
     {
         $this->info('Publishing assets');
         Artisan::call('vendor:publish', [
-            '--tag' => 'package-skeleton',
+            '--tag' => 'webentry',
             '--force' => true,
         ]);
     }
@@ -55,6 +55,6 @@ class Install extends PackageInstallCommand
     public function handle()
     {
         parent::handle();
-        $this->info('Package Skeleton has been installed');
+        $this->info('Webentry has been installed');
     }
 }
