@@ -58,6 +58,6 @@ function dashesToCamelCase($string, $capitalizeFirstCharacter = false, $replace 
 
 searchDirectoryFiles(getcwd() . '/', 'webentry', $argv[1]);
 
-searchDirectoryFiles(getcwd() . '/', 'Webentry', dashesToCamelCase($argv[1], true));
+searchDirectoryFiles(getcwd() . '/', 'WebEntry', dashesToCamelCase($argv[1], true));
 
-searchDirectoryFiles(getcwd() . '/', 'Webentry', dashesToCamelCase($argv[1], true, ' '));
+searchDirectoryFiles(getcwd() . '/', 'WebEntry', dashesToCamelCase($argv[1], true, ' '));

@@ -1,8 +1,8 @@
 <?php
 
-use ProcessMaker\Package\Webentry\Http\Controllers\WebentryController;
+use ProcessMaker\Package\WebEntry\Http\Controllers\WebEntryController;
 
 Route::group(['middleware' => ['auth']], function () {
-    Route::get('admin/webentry', [WebentryController::class, 'index'])->name('package.skeleton.index');
-    Route::get('webentry', [WebentryController::class, 'index'])->name('package.skeleton.tab.index');
+    Route::get('admin/webentry', [WebEntryController::class, 'index'])->name('package.webentry.index');
+    Route::get('webentry', [WebEntryController::class, 'index'])->name('package.webentry.tab.index');
 });

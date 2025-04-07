@@ -1,6 +1,6 @@
 <?php
 
-namespace ProcessMaker\Package\Webentry\Console\Commands;
+namespace ProcessMaker\Package\WebEntry\Console\Commands;
 
 use Illuminate\Console\Command;
 

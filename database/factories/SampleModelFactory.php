@@ -1,10 +1,10 @@
 <?php
 
-namespace ProcessMaker\Package\Webentry\Database\Factories;
+namespace ProcessMaker\Package\WebEntry\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use ProcessMaker\Package\Webentry\Enums\StatusEnum;
-use ProcessMaker\Package\Webentry\Models\Sample;
+use ProcessMaker\Package\WebEntry\Enums\StatusEnum;
+use ProcessMaker\Package\WebEntry\Models\WebEntryRoute;
 
 class SampleModelFactory extends Factory
 {
@@ -15,7 +15,7 @@ class SampleModelFactory extends Factory
      */
     public function modelName()
     {
-        return Sample::class;
+        return WebEntryRoute::class;
     }
 
     /**
