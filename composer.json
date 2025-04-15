@@ -1,5 +1,5 @@
 {
-    "name": "bpmnmaker/webentry",
+    "name": "bpmnmaker/accessibitiy",
     "friendly_name": "Webentry",
     "description": "Package skeleton to develop a package for ProcessMaker 4",
     "license": "AGPL-3.0-or-later",
@@ -15,14 +15,14 @@
     },
     "autoload": {
         "psr-4": {
-            "ProcessMaker\\Package\\WebEntry\\": "src",
+            "ProcessMaker\\Package\\Accessibitiy\\": "src",
             "Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "ProcessMaker\\Package\\WebEntry\\PackageServiceProvider"
+                "ProcessMaker\\Package\\Accessibitiy\\PackageServiceProvider"
             ]
         }
     },

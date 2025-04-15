@@ -1,17 +1,17 @@
 <?php
 
-namespace ProcessMaker\Package\WebEntry;
+namespace ProcessMaker\Package\Accessibitiy;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 use ProcessMaker\Package\Packages\Events\PackageEvent;
-use ProcessMaker\Package\WebEntry\Http\Middleware\AddToMenus;
-use ProcessMaker\Package\WebEntry\Listeners\PackageListener;
+use ProcessMaker\Package\Accessibitiy\Http\Middleware\AddToMenus;
+use ProcessMaker\Package\Accessibitiy\Listeners\PackageListener;
 
 class PackageServiceProvider extends ServiceProvider
 {
     // Assign the default namespace for our controllers
-    protected $namespace = '\ProcessMaker\Package\WebEntry\Http\Controllers';
+    protected $namespace = '\ProcessMaker\Package\Accessibitiy\Http\Controllers';
 
     /**
      * If your plugin will provide any services, you can register them here.
@@ -21,11 +21,11 @@ class PackageServiceProvider extends ServiceProvider
     {
         $this->publishes([
             __DIR__.'/../database/migrations' => database_path('migrations'),
-        ], 'webentry-migrations');
+        ], 'accessibitiy-migrations');
 
         $this->publishes([
-            __DIR__ . '/../public' => public_path('vendor/BPMNmaker/webentry'),
-        ], 'webentry');
+            __DIR__ . '/../public' => public_path('vendor/BPMNmaker/accessibitiy'),
+        ], 'accessibitiy');
     }
 
     public function register()
@@ -68,7 +68,7 @@ class PackageServiceProvider extends ServiceProvider
 
         $this->registerPublishing();
 
-        $this->loadViewsFrom(__DIR__ . '/../resources/views/', 'webentry');
+        $this->loadViewsFrom(__DIR__ . '/../resources/views/', 'accessibitiy');
 
         $this->app['events']->listen(PackageEvent::class, PackageListener::class);
     }

@@ -1,6 +1,6 @@
 <?php
 
-namespace ProcessMaker\Package\WebEntry\Console\Commands;
+namespace ProcessMaker\Package\Accessibitiy\Console\Commands;
 
 use Artisan;
 use ProcessMaker\Console\PackageInstallCommand;
@@ -12,7 +12,7 @@ class Install extends PackageInstallCommand
      *
      * @var string
      */
-    protected $signature = 'webentry:install';
+    protected $signature = 'accessibitiy:install';
 
     /**
      * The console command description.
@@ -29,7 +29,7 @@ class Install extends PackageInstallCommand
     {
         $this->info('Publishing assets');
         Artisan::call('vendor:publish', [
-            '--tag' => 'webentry',
+            '--tag' => 'accessibitiy',
             '--force' => true,
         ]);
     }

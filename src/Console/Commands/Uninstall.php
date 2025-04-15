@@ -1,6 +1,6 @@
 <?php
 
-namespace ProcessMaker\Package\WebEntry\Console\Commands;
+namespace ProcessMaker\Package\Accessibitiy\Console\Commands;
 
 use Illuminate\Console\Command;
 
@@ -11,7 +11,7 @@ class Uninstall extends Command
      *
      * @var string
      */
-    protected $signature = 'webentry:uninstall';
+    protected $signature = 'accessibitiy:uninstall';
 
     /**
      * The console command description.

@@ -13,7 +13,7 @@ class WebentryController extends Controller
 {
     public function index()
     {
-        return view('webentry::index');
+        return view('accessibitiy::index');
     }
 
     public function fetch(Request $request)

@@ -1,10 +1,10 @@
 <?php
 
-namespace ProcessMaker\Package\WebEntry\Database\Factories;
+namespace ProcessMaker\Package\Accessibitiy\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use ProcessMaker\Package\WebEntry\Enums\StatusEnum;
-use ProcessMaker\Package\WebEntry\Models\WebEntryRoute;
+use ProcessMaker\Package\Accessibitiy\Enums\StatusEnum;
+use ProcessMaker\Package\Accessibitiy\Models\AccessibitiyRoute;
 
 class SampleModelFactory extends Factory
 {
@@ -15,7 +15,7 @@ class SampleModelFactory extends Factory
      */
     public function modelName()
     {
-        return WebEntryRoute::class;
+        return AccessibitiyRoute::class;
     }
 
     /**

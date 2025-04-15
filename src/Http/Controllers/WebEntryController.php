@@ -1,24 +1,24 @@
 <?php
 
-namespace ProcessMaker\Package\WebEntry\Http\Controllers;
+namespace ProcessMaker\Package\Accessibitiy\Http\Controllers;
 
 use Illuminate\Http\Request;
 use ProcessMaker\Http\Controllers\Controller;
 use ProcessMaker\Http\Resources\ApiCollection;
-use ProcessMaker\Package\WebEntry\Models\WebEntryRoute;
+use ProcessMaker\Package\Accessibitiy\Models\AccessibitiyRoute;
 use RBAC;
 use URL;
 
-class WebEntryController extends Controller
+class AccessibitiyController extends Controller
 {
     public function index()
     {
-        return view('webentry::index');
+        return view('accessibitiy::index');
     }
 
     public function fetch(Request $request)
     {
-        $query = WebEntryRoute::query();
+        $query = AccessibitiyRoute::query();
 
         $filter = $request->input('filter', '');
         if (!empty($filter)) {
@@ -42,7 +42,7 @@ class WebEntryController extends Controller
 
     public function store(Request $request)
     {
-        $sample = new WebEntryRoute();
+        $sample = new AccessibitiyRoute();
         $sample->fill($request->json()->all());
         $sample->saveOrFail();
 
@@ -51,7 +51,7 @@ class WebEntryController extends Controller
 
     public function update(Request $request, $license_generator)
     {
-        WebEntryRoute::where('id', $license_generator)->update([
+        AccessibitiyRoute::where('id', $license_generator)->update([
             'name' => $request->get('name'),
             'status' => $request->get('status'),
         ]);
@@ -61,7 +61,7 @@ class WebEntryController extends Controller
 
     public function destroy($license_generator)
     {
-        WebEntryRoute::find($license_generator)->delete();
+        AccessibitiyRoute::find($license_generator)->delete();
 
         return response([], 204);
     }

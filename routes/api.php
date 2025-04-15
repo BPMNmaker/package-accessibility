@@ -1,8 +1,8 @@
 <?php
 
-use ProcessMaker\Package\WebEntry\Http\Controllers\WebEntryController;
+use ProcessMaker\Package\Accessibitiy\Http\Controllers\AccessibitiyController;
 
 Route::group(['middleware' => ['auth:api', 'bindings']], function () {
-    Route::get('admin/webentry/fetch', [WebEntryController::class, 'fetch'])->name('package.webentry.fetch');
-    Route::apiResource('admin/webentry', WebEntryController::class);
+    Route::get('admin/accessibitiy/fetch', [AccessibitiyController::class, 'fetch'])->name('package.accessibitiy.fetch');
+    Route::apiResource('admin/accessibitiy', AccessibitiyController::class);
 });

@@ -1,8 +1,8 @@
 <?php
 
-use ProcessMaker\Package\WebEntry\Http\Controllers\WebEntryController;
+use ProcessMaker\Package\Accessibitiy\Http\Controllers\AccessibitiyController;
 
 Route::group(['middleware' => ['auth']], function () {
-    Route::get('admin/webentry', [WebEntryController::class, 'index'])->name('package.webentry.index');
-    Route::get('webentry', [WebEntryController::class, 'index'])->name('package.webentry.tab.index');
+    Route::get('admin/accessibitiy', [AccessibitiyController::class, 'index'])->name('package.accessibitiy.index');
+    Route::get('accessibitiy', [AccessibitiyController::class, 'index'])->name('package.accessibitiy.tab.index');
 });
