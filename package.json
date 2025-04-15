@@ -1,11 +1,11 @@
 {
-  "name": "accessibitiy",
+  "name": "accessibility",
   "version": "0.0.4",
   "description": "Package skeleton to start a develop in PM 4",
   "author": "DevOps <devops@hamidshariati.ir>",
   "license": "ISC",
   "type": "module",
-  "homepage": "https://github.com/BPMNmaker/accessibitiy",
+  "homepage": "https://github.com/BPMNmaker/accessibility",
   "scripts": {
     "dev": "vite build --watch",
     "watch": "vite build --watch",

@@ -1,5 +1,5 @@
 <?php
-namespace Tests\Accessibitiy;
+namespace Tests\Accessibility;
 
 use Tests\TestCase;
 

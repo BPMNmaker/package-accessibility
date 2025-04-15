@@ -1,6 +1,6 @@
 <?php
 
-namespace ProcessMaker\Package\Webentry\Models;
+namespace ProcessMaker\Package\Accessibility\Models;
 
 use ProcessMaker\Models\ProcessMakerModel;
 

@@ -1,24 +1,24 @@
 <?php
 
-namespace ProcessMaker\Package\Accessibitiy\Http\Controllers;
+namespace ProcessMaker\Package\Accessibility\Http\Controllers;
 
 use Illuminate\Http\Request;
 use ProcessMaker\Http\Controllers\Controller;
 use ProcessMaker\Http\Resources\ApiCollection;
-use ProcessMaker\Package\Accessibitiy\Models\AccessibitiyRoute;
+use ProcessMaker\Package\Accessibility\Models\AccessibilityRoute;
 use RBAC;
 use URL;
 
-class AccessibitiyController extends Controller
+class AccessibilityController extends Controller
 {
     public function index()
     {
-        return view('accessibitiy::index');
+        return view('accessibility::index');
     }
 
     public function fetch(Request $request)
     {
-        $query = AccessibitiyRoute::query();
+        $query = AccessibilityRoute::query();
 
         $filter = $request->input('filter', '');
         if (!empty($filter)) {
@@ -42,7 +42,7 @@ class AccessibitiyController extends Controller
 
     public function store(Request $request)
     {
-        $sample = new AccessibitiyRoute();
+        $sample = new AccessibilityRoute();
         $sample->fill($request->json()->all());
         $sample->saveOrFail();
 
@@ -51,7 +51,7 @@ class AccessibitiyController extends Controller
 
     public function update(Request $request, $license_generator)
     {
-        AccessibitiyRoute::where('id', $license_generator)->update([
+        AccessibilityRoute::where('id', $license_generator)->update([
             'name' => $request->get('name'),
             'status' => $request->get('status'),
         ]);
@@ -61,7 +61,7 @@ class AccessibitiyController extends Controller
 
     public function destroy($license_generator)
     {
-        AccessibitiyRoute::find($license_generator)->delete();
+        AccessibilityRoute::find($license_generator)->delete();
 
         return response([], 204);
     }

@@ -1,10 +1,10 @@
 {
-    "name": "bpmnmaker/accessibitiy",
-    "friendly_name": "Webentry",
-    "description": "Package skeleton to develop a package for ProcessMaker 4",
+    "name": "bpmnmaker/accessibility",
+    "friendly_name": "Accessibility",
+    "description": "Package accessibility for ProcessMaker 4",
     "license": "AGPL-3.0-or-later",
     "version": "0.0.3",
-    "type": "project",
+    "type": "package",
     "authors": [
         {
             "name": "DevOps",
@@ -15,14 +15,14 @@
     },
     "autoload": {
         "psr-4": {
-            "ProcessMaker\\Package\\Accessibitiy\\": "src",
+            "ProcessMaker\\Package\\Accessibility\\": "src",
             "Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "ProcessMaker\\Package\\Accessibitiy\\PackageServiceProvider"
+                "ProcessMaker\\Package\\Accessibility\\PackageServiceProvider"
             ]
         }
     },

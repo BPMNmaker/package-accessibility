@@ -1,6 +1,6 @@
 <?php
 
-namespace ProcessMaker\Package\Accessibitiy\Console\Commands;
+namespace ProcessMaker\Package\Accessibility\Console\Commands;
 
 use Illuminate\Console\Command;
 
@@ -11,14 +11,14 @@ class Uninstall extends Command
      *
      * @var string
      */
-    protected $signature = 'accessibitiy:uninstall';
+    protected $signature = 'accessibility:uninstall';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Uninstall Webentry Package';
+    protected $description = 'Uninstall Accessibility Package';
 
     /**
      * Execute the console command.
@@ -27,6 +27,6 @@ class Uninstall extends Command
      */
     public function handle()
     {
-        $this->info('Webentry package Uninstalled');
+        $this->info('Accessibility package Uninstalled');
     }
 }

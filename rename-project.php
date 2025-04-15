@@ -56,8 +56,8 @@ function dashesToCamelCase($string, $capitalizeFirstCharacter = false, $replace 
     return $str;
 }
 
-searchDirectoryFiles(getcwd() . '/', 'accessibitiy', $argv[1]);
+searchDirectoryFiles(getcwd() . '/', 'accessibility', $argv[1]);
 
-searchDirectoryFiles(getcwd() . '/', 'Accessibitiy', dashesToCamelCase($argv[1], true));
+searchDirectoryFiles(getcwd() . '/', 'Accessibility', dashesToCamelCase($argv[1], true));
 
-searchDirectoryFiles(getcwd() . '/', 'Accessibitiy', dashesToCamelCase($argv[1], true, ' '));
+searchDirectoryFiles(getcwd() . '/', 'Accessibility', dashesToCamelCase($argv[1], true, ' '));

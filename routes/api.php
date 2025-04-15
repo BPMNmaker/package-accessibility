@@ -1,8 +1,8 @@
 <?php
 
-use ProcessMaker\Package\Accessibitiy\Http\Controllers\AccessibitiyController;
+use ProcessMaker\Package\Accessibility\Http\Controllers\AccessibilityController;
 
 Route::group(['middleware' => ['auth:api', 'bindings']], function () {
-    Route::get('admin/accessibitiy/fetch', [AccessibitiyController::class, 'fetch'])->name('package.accessibitiy.fetch');
-    Route::apiResource('admin/accessibitiy', AccessibitiyController::class);
+    Route::get('admin/accessibility/fetch', [AccessibilityController::class, 'fetch'])->name('package.accessibility.fetch');
+    Route::apiResource('admin/accessibility', AccessibilityController::class);
 });

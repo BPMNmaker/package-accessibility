@@ -1,12 +1,12 @@
 <?php
 
-namespace ProcessMaker\Package\Accessibitiy\Models;
+namespace ProcessMaker\Package\Accessibility\Models;
 
 use ProcessMaker\Models\ProcessMakerModel;
 
-class AccessibitiyRoute extends ProcessMakerModel
+class AccessibilityRoute extends ProcessMakerModel
 {
-    protected $table = 'accessibitiy_routes';
+    protected $table = 'accessibility_routes';
 
     protected $fillable = [
         'id', 'destination', 'status',

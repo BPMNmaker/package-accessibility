@@ -6,7 +6,7 @@ window.Vue.use(VModal);
 window.Vue.use(BootstrapVue);
 
 export default new window.Vue({
-  el: '#app-accessibitiy',
+  el: '#app-accessibility',
   components: { SampleListing },
   data: {
     filter: '',
@@ -49,7 +49,7 @@ export default new window.Vue({
       if (this.validateForm()) {
         this.addError.name = null;
         if (this.action === 'Add') {
-          ProcessMaker.apiClient.post('admin/accessibitiy', {
+          ProcessMaker.apiClient.post('admin/accessibility', {
             name: this.sample.name,
             status: this.sample.status,
           })
@@ -69,7 +69,7 @@ export default new window.Vue({
               this.$refs.modal.hide();
             });
         } else {
-          ProcessMaker.apiClient.patch(`admin/accessibitiy/${this.sample.id}`, {
+          ProcessMaker.apiClient.patch(`admin/accessibility/${this.sample.id}`, {
             name: this.sample.name,
             status: this.sample.status,
           })

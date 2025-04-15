@@ -1,19 +1,19 @@
 <?php
 
-namespace ProcessMaker\Package\Webentry\Http\Controllers;
+namespace ProcessMaker\Package\Accessibility\Http\Controllers;
 
 use Illuminate\Http\Request;
 use ProcessMaker\Http\Controllers\Controller;
 use ProcessMaker\Http\Resources\ApiCollection;
-use ProcessMaker\Package\Webentry\Models\Sample;
+use ProcessMaker\Package\Accessibility\Models\Sample;
 use RBAC;
 use URL;
 
-class WebentryController extends Controller
+class AccessibilityController extends Controller
 {
     public function index()
     {
-        return view('accessibitiy::index');
+        return view('accessibility::index');
     }
 
     public function fetch(Request $request)

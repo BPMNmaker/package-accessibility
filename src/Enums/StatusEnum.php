@@ -1,6 +1,6 @@
 <?php
 
-namespace ProcessMaker\Package\Accessibitiy\Enums;
+namespace ProcessMaker\Package\Accessibility\Enums;
 
 enum StatusEnum
 {

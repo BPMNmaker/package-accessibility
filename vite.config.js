@@ -6,7 +6,7 @@ import { resolve } from 'node:path';
 import istanbul from 'vite-plugin-istanbul';
 import convertToMixManifest from './resources/vite2webpack';
 
-const libraryName = 'accessibitiy';
+const libraryName = 'accessibility';
 
 export default defineConfig({
   resolve: {
