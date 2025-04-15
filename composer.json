@@ -1,5 +1,5 @@
 {
-    "name": "bpmnmaker/accessibility",
+    "name": "bpmnmaker/package-accessibility",
     "friendly_name": "Accessibility",
     "description": "Package accessibility for ProcessMaker 4",
     "license": "AGPL-3.0-or-later",
